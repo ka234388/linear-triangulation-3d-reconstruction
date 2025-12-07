@@ -279,7 +279,7 @@ addpath(genpath('/path/to/linear-triangulation-3d-reconstruction'));
 
 ---
 
-## 🏃 How to Run
+## How to Run
 
 ### Quick Start (Run on All Datasets)
 
@@ -580,57 +580,3 @@ The 4×4 matrix is rank-deficient (rank ≤ 3). Solution is right singular vecto
 
 ---
 
-## 📝 Author & Acknowledgments
-
-**Author:** Karthika Ramasamy  
-**University:** University of Central Florida (UCF)  
-**Program:** MS in Computer Vision  
-**Course:** CAP 6419: 3D Computer Vision  
-**Instructor:** Dr. Hassan Foroosh  
-**Date:** December 2025
-
-**Team Collaborators:**
-- Josh
-- Rodrigo
-- Umaima
-
-Thanks to the UCF Computer Science Department and Prof. Dr. Hassan Foroosh for guidance throughout this assignment.
-
----
-
-## 📄 License
-
-This project is for educational purposes as part of CAP 6419 coursework at UCF.
-
----
-
-## 🤝 Contributing
-
-For improvements or bug reports, feel free to:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
----
-
-## ❓ FAQ
-
-**Q: Why use SVD instead of DLT (Direct Linear Transform)?**  
-A: SVD is more numerically stable for homogeneous systems. DLT works but can be ill-conditioned; SVD automatically handles rank-deficiency.
-
-**Q: What if SNR < 80 dB?**  
-A: Check camera calibration quality, feature matching parameters, and RANSAC inliers. Low SNR indicates calibration or matching errors.
-
-**Q: Can I use monocular images?**  
-A: No, triangulation requires at minimum two camera views. Single images cannot provide depth information.
-
-**Q: How sensitive is the method to camera calibration?**  
-A: Very sensitive. Poor K matrices directly propagate to reconstruction error. Use high-quality camera calibration.
-
-**Q: What if RANSAC inliers < 100%?**  
-A: Some outliers may persist. Adjust `ratioThreshold` (tighter matching) or `ransacThreshold` (stricter geometric constraint).
-
----
-
-**Last Updated:** December 6, 2025  
-**Status:** Production-Ready ✓
