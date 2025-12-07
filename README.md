@@ -28,9 +28,8 @@ This project implements a complete stereo vision pipeline to reconstruct 3D poin
 - Triangulates 3D world coordinates using linear algebra (SVD-based method)
 - Validates results against MATLAB's built-in `triangulate()` function
 - Achieves SNR values of **90.44 – 123.55 dB** across diverse datasets
-
-**Course:** CAP 6419: 3D Computer Vision, University of Central Florida  
-**Assignment:** Homework 5 - Linear Triangulation and 3D Reconstruction
+ 
+**Assignment:** Linear Triangulation and 3D Reconstruction
 
 ---
 
@@ -74,7 +73,7 @@ This linear method is robust, computationally efficient, and does not require it
 
 ---
 
-## ❓ Why is it Needed?
+## Why is it Needed?
 
 ### Key Reasons:
 
@@ -94,10 +93,9 @@ This linear method is robust, computationally efficient, and does not require it
 - **Medical Imaging:** 3D reconstruction from stereo X-rays or endoscopy
 - **Photogrammetry:** Creating 3D models from multiple photographs
 - **SLAM (Simultaneous Localization and Mapping):** Building maps while navigating
-
 ---
 
-## 🗺️ Where is it Used?
+## Where is it Used?
 
 ### Industry Applications:
 
@@ -114,7 +112,7 @@ This linear method is robust, computationally efficient, and does not require it
 
 ---
 
-## 🛠️ How It Works
+## How It Works
 
 ### Complete Pipeline Overview:
 
@@ -230,26 +228,18 @@ linear-triangulation-3d-reconstruction/
 
 ---
 
-## 📦 Requirements
+## Requirements
 
-- **MATLAB** R2020a or later (Computer Vision Toolbox required)
+- **MATLAB** R2020a or later
 - **Computer Vision Toolbox** for:
   - `detectSIFTFeatures()` – Feature detection
   - `matchFeatures()` – Feature matching
   - `estimateFundamentalMatrix()` – Epipolar geometry
   - `svd()` – Matrix decomposition
   - `scatter3()` – 3D visualization
-
-### MATLAB Toolboxes Required:
-```matlab
-• Computer Vision Toolbox
-• Image Processing Toolbox (optional, for image manipulation)
-• Statistics and Machine Learning Toolbox (for RANSAC)
-```
-
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -257,15 +247,7 @@ git clone https://github.com/yourusername/linear-triangulation-3d-reconstruction
 cd linear-triangulation-3d-reconstruction
 ```
 
-### 2. Verify MATLAB Toolboxes
-Open MATLAB and check installed toolboxes:
-```matlab
-ver
-```
-
-Ensure "Computer Vision Toolbox" is listed.
-
-### 3. Add to MATLAB Path (Optional)
+### 3. Add to MATLAB Path 
 ```matlab
 addpath(genpath('/path/to/linear-triangulation-3d-reconstruction'));
 ```
@@ -276,19 +258,17 @@ addpath(genpath('/path/to/linear-triangulation-3d-reconstruction'));
   - `image1.jpg` – First image
   - `image2.jpg` – Second image
   - `calib.mat` – Calibration file with intrinsic matrices K1, K2
-
 ---
 
 ## How to Run
 
-### Quick Start (Run on All Datasets)
-
+### Quick Start
 Simply execute:
 ```matlab
 cd /path/to/linear-triangulation-3d-reconstruction
 linbackproj_main
-```
 
+```
 The script will automatically:
 1. Load all stereo image pairs from `stereo_datasets/`
 2. Run the complete reconstruction pipeline
@@ -409,7 +389,7 @@ All errors are within acceptable tolerances, confirming correctness of implement
 
 ---
 
-## 🔧 Algorithm Details
+## Algorithm Details
 
 ### Core Triangulation Function: `linbackproj.m`
 
