@@ -542,21 +542,3 @@ The 4×4 matrix is rank-deficient (rank ≤ 3). Solution is right singular vecto
 
 ---
 
-## 🔗 References
-
-1. **Hartley, R., & Zisserman, A.** (2003). *Multiple View Geometry in Computer Vision* (2nd ed.). Cambridge University Press.
-
-2. **Lowe, D. G.** (2004). Distinctive Image Features from Scale-Invariant Keypoints. *International Journal of Computer Vision*, 60(2), 91–110.
-
-3. **Fischler, M. A., & Bolles, R. C.** (1981). Random Sample Consensus: A Paradigm for Model Fitting. *Communications of the ACM*, 24(6), 381–395.
-
-4. **Dr. Hassan Foroosh.** (2025). CAP 6419: 3D Computer Vision Lecture Notes. University of Central Florida.
-
-5. **MATLAB Computer Vision Toolbox Documentation.** (2024). MathWorks.
-   - Feature Detection: `detectSIFTFeatures()`
-   - Feature Matching: `matchFeatures()`
-   - Matrix Decomposition: `svd()`
-   - 3D Visualization: `scatter3()`
-
----
-
